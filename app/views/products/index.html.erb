@@ -6,7 +6,7 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-md-2 col-md-4">
-        <%= image_tag product.image_url if present?, class: "img-responsive") %>
+        <%= image_tag product.image_url if product.image_url.present?, class: "img-responsive") %>
         <h1><%= product.name %></h1>
         <p><%= product.description %></p>
         <strong><%= product.price %></strong>
